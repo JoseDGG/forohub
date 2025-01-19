@@ -1,4 +1,4 @@
-package com.jdgg.forohub.service;
+package com.jdgg.forohub.infra.errores;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
