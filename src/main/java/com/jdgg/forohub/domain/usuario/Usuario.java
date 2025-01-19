@@ -1,6 +1,7 @@
-package com.jdgg.forohub.usuario;
+package com.jdgg.forohub.domain.usuario;
 
 import jakarta.persistence.*;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -24,5 +25,12 @@ public class Usuario {
     //Indica el rol que debe tener para poder acceder a diferentes metodos HTTP.
     @Enumerated(EnumType.STRING)
     private Rol rol; //Perfil
+
+    public Usuario(RegistroUsuarioDTO registroUsuario) {
+        this.nombre = registroUsuario.nombre();
+        this.correoElectronico = registroUsuario.correoElectronico().toLowerCase();
+        this.contrasena = registroUsuario.contrasena();
+        this.rol = Rol.USUARIO;
+    }
 }
 

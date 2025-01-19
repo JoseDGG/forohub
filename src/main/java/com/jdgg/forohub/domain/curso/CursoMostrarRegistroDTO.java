@@ -1,4 +1,4 @@
-package com.jdgg.forohub.curso;
+package com.jdgg.forohub.domain.curso;
 
 public record CursoMostrarRegistroDTO(
         Long id,

@@ -1,8 +1,8 @@
 package com.jdgg.forohub.service;
 
-import com.jdgg.forohub.topico.RegistroTopicoDTO;
-import com.jdgg.forohub.topico.Topico;
-import com.jdgg.forohub.topico.TopicoRepository;
+import com.jdgg.forohub.domain.topico.RegistroTopicoDTO;
+import com.jdgg.forohub.domain.topico.Topico;
+import com.jdgg.forohub.domain.topico.TopicoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

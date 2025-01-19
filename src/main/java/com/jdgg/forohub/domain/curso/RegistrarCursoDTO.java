@@ -1,4 +1,4 @@
-package com.jdgg.forohub.curso;
+package com.jdgg.forohub.domain.curso;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

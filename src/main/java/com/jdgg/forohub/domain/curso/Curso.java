@@ -1,4 +1,4 @@
-package com.jdgg.forohub.curso;
+package com.jdgg.forohub.domain.curso;
 
 import jakarta.persistence.*;
 import lombok.*;

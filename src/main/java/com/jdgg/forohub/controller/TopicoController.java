@@ -1,18 +1,12 @@
 package com.jdgg.forohub.controller;
 
 import com.jdgg.forohub.service.TopicoService;
-import com.jdgg.forohub.topico.RegistroTopicoDTO;
-import com.jdgg.forohub.topico.RespuestaTopicoDTO;
-import com.jdgg.forohub.topico.Topico;
-import com.jdgg.forohub.topico.TopicoRepository;
+import com.jdgg.forohub.domain.topico.RegistroTopicoDTO;
+import com.jdgg.forohub.domain.topico.RespuestaTopicoDTO;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RequestMapping("/topicos")
 @RestController

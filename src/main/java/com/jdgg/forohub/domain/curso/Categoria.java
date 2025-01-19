@@ -1,4 +1,4 @@
-package com.jdgg.forohub.curso;
+package com.jdgg.forohub.domain.curso;
 
 public enum Categoria {
     SQL,

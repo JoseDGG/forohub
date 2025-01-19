@@ -1,4 +1,4 @@
-package com.jdgg.forohub.usuario;
+package com.jdgg.forohub.domain.usuario;
 
 public enum Rol {
     ADMIN,

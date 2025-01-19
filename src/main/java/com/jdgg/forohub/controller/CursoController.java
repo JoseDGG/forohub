@@ -1,8 +1,7 @@
 package com.jdgg.forohub.controller;
 
-import com.jdgg.forohub.curso.Curso;
-import com.jdgg.forohub.curso.CursoMostrarRegistroDTO;
-import com.jdgg.forohub.curso.RegistrarCursoDTO;
+import com.jdgg.forohub.domain.curso.CursoMostrarRegistroDTO;
+import com.jdgg.forohub.domain.curso.RegistrarCursoDTO;
 import com.jdgg.forohub.service.CursoService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

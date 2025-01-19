@@ -1,10 +1,9 @@
-package com.jdgg.forohub.topico;
+package com.jdgg.forohub.domain.topico;
 
-import com.jdgg.forohub.usuario.Usuario;
-import com.jdgg.forohub.curso.Curso;
-import com.jdgg.forohub.respuesta.Respuesta;
+import com.jdgg.forohub.domain.usuario.Usuario;
+import com.jdgg.forohub.domain.curso.Curso;
+import com.jdgg.forohub.domain.respuesta.Respuesta;
 import jakarta.persistence.*;
-import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

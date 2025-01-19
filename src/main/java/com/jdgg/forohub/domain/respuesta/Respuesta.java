@@ -1,7 +1,7 @@
-package com.jdgg.forohub.respuesta;
+package com.jdgg.forohub.domain.respuesta;
 
-import com.jdgg.forohub.topico.Topico;
-import com.jdgg.forohub.usuario.Usuario;
+import com.jdgg.forohub.domain.topico.Topico;
+import com.jdgg.forohub.domain.usuario.Usuario;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
