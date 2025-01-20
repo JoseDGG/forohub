@@ -15,7 +15,10 @@ public class Curso {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(unique = true)
     private String nombre;
+
     @Enumerated(EnumType.STRING)
     private Categoria categoria;
 

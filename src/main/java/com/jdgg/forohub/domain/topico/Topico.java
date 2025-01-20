@@ -27,10 +27,10 @@ public class Topico {
     private String titulo;
     private String mensaje;
 
-    @Column(name = "fecha_creacion")
+    @Column(name = "fecha_creacion", insertable = false, updatable = false)
     private LocalDateTime fechaCreacion; //sql automaticamente lo maneja
 
-    private String status;
+    private boolean status; //True mientras el topico este abierto
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "autor_id")
@@ -43,10 +43,24 @@ public class Topico {
     @OneToMany(mappedBy = "topico", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Respuesta> respuestas = new ArrayList<>();
 
-    public Topico(RegistroTopicoDTO datos) {
+    public Topico(RegistroTopicoDTO datos, Usuario usuario, Curso curso) {
         this.titulo = datos.titulo();
         this.mensaje = datos.mensaje();
-        this.status = "ACTIVO";
+        this.status = true;
+        this.autor = usuario;
+        this.curso = curso;
+    }
+
+    public void actualizarTopico(ActualizarTopicoDTO actualizarTopico) {
+        if(actualizarTopico.titulo() != null){
+            this.titulo = actualizarTopico.titulo();
+        }
+        if (actualizarTopico.mensaje() != null){
+            this.mensaje = actualizarTopico.mensaje();
+        }
+        if (actualizarTopico.status() != null){
+            this.status = actualizarTopico.status();
+        }
     }
 }
 

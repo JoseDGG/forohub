@@ -1,0 +1,8 @@
+UPDATE topicos
+SET status = CASE
+    WHEN status = 'ACTIVO' THEN TRUE
+    ELSE FALSE
+END;
+
+ALTER TABLE topicos
+MODIFY COLUMN status BOOLEAN NOT NULL;

@@ -1,10 +1,9 @@
 package com.jdgg.forohub.service;
 
-import com.jdgg.forohub.domain.curso.Curso;
-import com.jdgg.forohub.domain.curso.CursoMostrarRegistroDTO;
-import com.jdgg.forohub.domain.curso.CursoRepository;
-import com.jdgg.forohub.domain.curso.RegistrarCursoDTO;
+import com.jdgg.forohub.domain.curso.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -14,9 +13,17 @@ public class CursoService {
     @Autowired
     CursoRepository cursoRepository;
 
-    @Transactional
-    public CursoMostrarRegistroDTO registrar(RegistrarCursoDTO registroCurso) {
+    public mostrarCursoDTO registrar(RegistrarCursoDTO registroCurso) {
         Curso curso = cursoRepository.save(new Curso(registroCurso));
-        return new CursoMostrarRegistroDTO(curso.getId(), curso.getNombre(), curso.getCategoria());
+        return new mostrarCursoDTO(curso.getId(), curso.getNombre(), curso.getCategoria());
+    }
+
+    public Page<ListadoCursosDTO> listarCursos(Pageable page) {
+        return cursoRepository.findAll(page).map(ListadoCursosDTO::new);
+    }
+
+    public mostrarCursoDTO mostrarCurso(Long id) {
+        Curso curso = cursoRepository.getReferenceById(id);
+        return new mostrarCursoDTO(curso.getId(), curso.getNombre(), curso.getCategoria());
     }
 }
