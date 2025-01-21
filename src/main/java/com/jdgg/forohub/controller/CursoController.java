@@ -1,9 +1,6 @@
 package com.jdgg.forohub.controller;
 
-import com.jdgg.forohub.domain.curso.RegistrarCursoDTO;
-import com.jdgg.forohub.service.CursoService;
-import com.jdgg.forohub.domain.curso.ListadoCursosDTO;
-import com.jdgg.forohub.domain.curso.mostrarCursoDTO;
+import com.jdgg.forohub.domain.curso.*;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -44,5 +41,12 @@ public class CursoController {
     public ResponseEntity<mostrarCursoDTO> mostrarCurso(@PathVariable("id") Long id){
         mostrarCursoDTO curso = cursoService.mostrarCurso(id);
         return ResponseEntity.ok(curso);
+    }
+
+    @PutMapping
+    @Transactional
+    public ResponseEntity<mostrarCursoDTO> actualizarCurso(@RequestBody @Valid ActualizarCursoDTO actualizarCursoDTO){
+        mostrarCursoDTO cursoActualizado = cursoService.actualizarCurso(actualizarCursoDTO);
+        return ResponseEntity.ok(cursoActualizado);
     }
 }

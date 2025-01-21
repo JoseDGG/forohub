@@ -50,7 +50,7 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
-			<version>1.18.30</version> <!-- Use the latest version -->
+			<version>1.18.30</version> <!-- Use the latest version and check the plugins in build -->
 			<scope>provided</scope> <!-- Lombok is provided during compilation -->
 		</dependency>
 

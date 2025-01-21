@@ -1,13 +1,8 @@
-package com.jdgg.forohub.service;
+package com.jdgg.forohub.domain.usuario;
 
-import com.jdgg.forohub.domain.usuario.RegistroUsuarioDTO;
-import com.jdgg.forohub.domain.usuario.RespuestaUsuarioDTO;
-import com.jdgg.forohub.domain.usuario.Usuario;
-import com.jdgg.forohub.domain.usuario.UsuarioRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class UsuarioService {

@@ -1,14 +1,14 @@
-package com.jdgg.forohub.domain.topico;
+package com.jdgg.forohub.domain.curso;
 
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 
-public record ActualizarTopicoDTO(
+public record ActualizarCursoDTO(
         @NotNull(message = "El ID del curso es obligatorio")
         @Positive
         Long id,
-        String titulo,
-        String mensaje,
-        Boolean status
+        String nombre,
+        Categoria categoria
 ) {
 }

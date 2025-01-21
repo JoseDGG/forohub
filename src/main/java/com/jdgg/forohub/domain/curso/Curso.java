@@ -1,6 +1,7 @@
 package com.jdgg.forohub.domain.curso;
 
 import jakarta.persistence.*;
+import jakarta.validation.Valid;
 import lombok.*;
 
 
@@ -25,5 +26,14 @@ public class Curso {
     public Curso(RegistrarCursoDTO registroCurso) {
         this.nombre = registroCurso.nombre();
         this.categoria = registroCurso.categoria();
+    }
+
+    public void actualizar(@Valid ActualizarCursoDTO actualizarCurso) {
+        if(actualizarCurso.nombre() != null){
+            this.nombre = actualizarCurso.nombre();
+        }
+        if(actualizarCurso.categoria() != null){
+            this.categoria = actualizarCurso.categoria();
+        }
     }
 }
