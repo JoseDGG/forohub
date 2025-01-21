@@ -1,4 +1,4 @@
-package com.jdgg.forohub.domain.topico;
+package com.jdgg.forohub.domain.topico.dto;
 
 import java.time.LocalDateTime;
 

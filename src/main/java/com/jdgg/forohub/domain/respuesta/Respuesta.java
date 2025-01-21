@@ -1,5 +1,6 @@
 package com.jdgg.forohub.domain.respuesta;
 
+import com.jdgg.forohub.domain.respuesta.dto.RegistroRespuestaDTO;
 import com.jdgg.forohub.domain.topico.Topico;
 import com.jdgg.forohub.domain.usuario.Usuario;
 import jakarta.persistence.*;

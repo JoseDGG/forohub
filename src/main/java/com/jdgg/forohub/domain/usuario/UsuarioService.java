@@ -1,5 +1,7 @@
 package com.jdgg.forohub.domain.usuario;
 
+import com.jdgg.forohub.domain.usuario.dto.RegistroUsuarioDTO;
+import com.jdgg.forohub.domain.usuario.dto.RespuestaUsuarioDTO;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

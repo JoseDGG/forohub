@@ -1,6 +1,6 @@
-package com.jdgg.forohub.domain.curso;
+package com.jdgg.forohub.domain.curso.dto;
 
-import jakarta.validation.constraints.NotBlank;
+import com.jdgg.forohub.domain.curso.Categoria;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 

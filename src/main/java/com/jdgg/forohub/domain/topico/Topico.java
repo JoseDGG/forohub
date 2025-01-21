@@ -1,6 +1,7 @@
 package com.jdgg.forohub.domain.topico;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.jdgg.forohub.domain.topico.dto.ActualizarTopicoDTO;
+import com.jdgg.forohub.domain.topico.dto.RegistroTopicoDTO;
 import com.jdgg.forohub.domain.usuario.Usuario;
 import com.jdgg.forohub.domain.curso.Curso;
 import com.jdgg.forohub.domain.respuesta.Respuesta;

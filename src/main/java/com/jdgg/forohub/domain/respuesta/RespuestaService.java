@@ -1,6 +1,8 @@
 package com.jdgg.forohub.domain.respuesta;
 
 import com.jdgg.forohub.domain.ValidacionException;
+import com.jdgg.forohub.domain.respuesta.dto.RegistroRespuestaDTO;
+import com.jdgg.forohub.domain.respuesta.dto.RespuestaRespuestaDTO;
 import com.jdgg.forohub.domain.topico.*;
 import com.jdgg.forohub.domain.usuario.Usuario;
 import com.jdgg.forohub.domain.usuario.UsuarioRepository;

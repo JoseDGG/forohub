@@ -1,4 +1,4 @@
-package com.jdgg.forohub.domain.usuario;
+package com.jdgg.forohub.domain.usuario.dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

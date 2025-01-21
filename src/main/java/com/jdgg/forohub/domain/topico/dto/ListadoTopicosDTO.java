@@ -1,8 +1,6 @@
-package com.jdgg.forohub.controller;
+package com.jdgg.forohub.domain.topico.dto;
 
-import com.jdgg.forohub.domain.curso.Curso;
 import com.jdgg.forohub.domain.topico.Topico;
-import com.jdgg.forohub.domain.usuario.Usuario;
 
 import java.time.LocalDateTime;
 

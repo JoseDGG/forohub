@@ -1,11 +1,11 @@
 package com.jdgg.forohub.domain.topico;
 
-import com.jdgg.forohub.controller.ListadoTopicosDTO;
 import com.jdgg.forohub.domain.ValidacionException;
 import com.jdgg.forohub.domain.curso.Curso;
 import com.jdgg.forohub.domain.curso.CursoRepository;
 import com.jdgg.forohub.domain.respuesta.Respuesta;
 import com.jdgg.forohub.domain.respuesta.RespuestaRepository;
+import com.jdgg.forohub.domain.topico.dto.*;
 import com.jdgg.forohub.domain.usuario.Usuario;
 import com.jdgg.forohub.domain.usuario.UsuarioRepository;
 import jakarta.validation.Valid;
@@ -15,7 +15,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Collections;
 import java.util.List;
 
 @Service

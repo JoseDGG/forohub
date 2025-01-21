@@ -1,4 +1,4 @@
-package com.jdgg.forohub.domain.respuesta;
+package com.jdgg.forohub.domain.respuesta.dto;
 
 import java.time.LocalDateTime;
 

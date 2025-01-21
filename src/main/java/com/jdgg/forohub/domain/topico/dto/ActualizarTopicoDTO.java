@@ -1,4 +1,4 @@
-package com.jdgg.forohub.domain.topico;
+package com.jdgg.forohub.domain.topico.dto;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;

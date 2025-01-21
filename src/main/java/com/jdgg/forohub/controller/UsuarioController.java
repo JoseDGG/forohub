@@ -1,7 +1,7 @@
 package com.jdgg.forohub.controller;
 
-import com.jdgg.forohub.domain.usuario.RegistroUsuarioDTO;
-import com.jdgg.forohub.domain.usuario.RespuestaUsuarioDTO;
+import com.jdgg.forohub.domain.usuario.dto.RegistroUsuarioDTO;
+import com.jdgg.forohub.domain.usuario.dto.RespuestaUsuarioDTO;
 import com.jdgg.forohub.domain.usuario.UsuarioService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

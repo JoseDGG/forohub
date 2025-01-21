@@ -1,6 +1,4 @@
-package com.jdgg.forohub.domain.topico;
-
-import com.jdgg.forohub.domain.respuesta.Respuesta;
+package com.jdgg.forohub.domain.topico.dto;
 
 import java.time.LocalDateTime;
 import java.util.List;

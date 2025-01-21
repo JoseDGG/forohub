@@ -1,5 +1,7 @@
 package com.jdgg.forohub.domain.curso;
 
+import com.jdgg.forohub.domain.curso.dto.ActualizarCursoDTO;
+import com.jdgg.forohub.domain.curso.dto.RegistrarCursoDTO;
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
 import lombok.*;

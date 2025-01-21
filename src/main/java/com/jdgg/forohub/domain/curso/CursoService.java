@@ -1,10 +1,11 @@
 package com.jdgg.forohub.domain.curso;
 
 import com.jdgg.forohub.domain.ValidacionException;
+import com.jdgg.forohub.domain.curso.dto.ActualizarCursoDTO;
+import com.jdgg.forohub.domain.curso.dto.ListadoCursosDTO;
+import com.jdgg.forohub.domain.curso.dto.RegistrarCursoDTO;
+import com.jdgg.forohub.domain.curso.dto.mostrarCursoDTO;
 import com.jdgg.forohub.domain.respuesta.Respuesta;
-import com.jdgg.forohub.domain.topico.ActualizarTopicoDTO;
-import com.jdgg.forohub.domain.topico.RespuestaTopicoDTO;
-import com.jdgg.forohub.domain.topico.Topico;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -42,5 +43,12 @@ public class CursoService {
                 .orElseThrow(() -> new ValidacionException("Curso no existe"));
         curso.actualizar(actualizarCursoDTO);
         return new mostrarCursoDTO(curso.getId(), curso.getNombre(), curso.getCategoria());
+    }
+
+    @Transactional
+    public void eliminarCurso(Long id) {
+        Curso curso = cursoRepository.findById(id)
+                .orElseThrow(() -> new ValidacionException("Curso no encontrado"));
+        cursoRepository.delete(curso);
     }
 }

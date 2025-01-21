@@ -1,4 +1,4 @@
-package com.jdgg.forohub.domain.topico;
+package com.jdgg.forohub.domain.topico.dto;
 
 import com.jdgg.forohub.domain.respuesta.Respuesta;
 
