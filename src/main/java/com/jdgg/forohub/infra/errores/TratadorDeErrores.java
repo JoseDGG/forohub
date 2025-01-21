@@ -1,4 +1,4 @@
-package com.jdgg.forohub.infra;
+package com.jdgg.forohub.infra.errores;
 
 import com.jdgg.forohub.domain.ValidacionException;
 import jakarta.persistence.EntityNotFoundException;

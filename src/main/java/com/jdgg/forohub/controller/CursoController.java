@@ -4,7 +4,7 @@ import com.jdgg.forohub.domain.curso.*;
 import com.jdgg.forohub.domain.curso.dto.ActualizarCursoDTO;
 import com.jdgg.forohub.domain.curso.dto.ListadoCursosDTO;
 import com.jdgg.forohub.domain.curso.dto.RegistrarCursoDTO;
-import com.jdgg.forohub.domain.curso.dto.mostrarCursoDTO;
+import com.jdgg.forohub.domain.curso.dto.MostrarCursoDTO;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -25,8 +25,8 @@ public class CursoController {
     CursoService cursoService;
 
     @PostMapping
-    public ResponseEntity<mostrarCursoDTO> registrarCurso(@RequestBody @Valid RegistrarCursoDTO registroCurso, UriComponentsBuilder uriComponentsBuilder){
-        mostrarCursoDTO respuesta = cursoService.registrar(registroCurso);
+    public ResponseEntity<MostrarCursoDTO> registrarCurso(@RequestBody @Valid RegistrarCursoDTO registroCurso, UriComponentsBuilder uriComponentsBuilder){
+        MostrarCursoDTO respuesta = cursoService.registrar(registroCurso);
         URI url = uriComponentsBuilder.path("/cursos/{id}").buildAndExpand(respuesta.id()).toUri();
         return ResponseEntity.created(url).body(respuesta);
     }
@@ -38,14 +38,14 @@ public class CursoController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<mostrarCursoDTO> mostrarCurso(@PathVariable("id") Long id){
-        mostrarCursoDTO curso = cursoService.mostrarCurso(id);
+    public ResponseEntity<MostrarCursoDTO> mostrarCurso(@PathVariable("id") Long id){
+        MostrarCursoDTO curso = cursoService.mostrarCurso(id);
         return ResponseEntity.ok(curso);
     }
 
     @PutMapping
-    public ResponseEntity<mostrarCursoDTO> actualizarCurso(@RequestBody @Valid ActualizarCursoDTO actualizarCursoDTO){
-        mostrarCursoDTO cursoActualizado = cursoService.actualizarCurso(actualizarCursoDTO);
+    public ResponseEntity<MostrarCursoDTO> actualizarCurso(@RequestBody @Valid ActualizarCursoDTO actualizarCursoDTO){
+        MostrarCursoDTO cursoActualizado = cursoService.actualizarCurso(actualizarCursoDTO);
         return ResponseEntity.ok(cursoActualizado);
     }
 

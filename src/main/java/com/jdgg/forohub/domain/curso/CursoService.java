@@ -4,8 +4,7 @@ import com.jdgg.forohub.domain.ValidacionException;
 import com.jdgg.forohub.domain.curso.dto.ActualizarCursoDTO;
 import com.jdgg.forohub.domain.curso.dto.ListadoCursosDTO;
 import com.jdgg.forohub.domain.curso.dto.RegistrarCursoDTO;
-import com.jdgg.forohub.domain.curso.dto.mostrarCursoDTO;
-import com.jdgg.forohub.domain.respuesta.Respuesta;
+import com.jdgg.forohub.domain.curso.dto.MostrarCursoDTO;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -20,9 +19,9 @@ public class CursoService {
     CursoRepository cursoRepository;
 
     @Transactional
-    public mostrarCursoDTO registrar(RegistrarCursoDTO registroCurso) {
+    public MostrarCursoDTO registrar(RegistrarCursoDTO registroCurso) {
         Curso curso = cursoRepository.save(new Curso(registroCurso));
-        return new mostrarCursoDTO(curso.getId(), curso.getNombre(), curso.getCategoria());
+        return new MostrarCursoDTO(curso.getId(), curso.getNombre(), curso.getCategoria());
     }
 
     @Transactional
@@ -31,18 +30,18 @@ public class CursoService {
     }
 
     @Transactional
-    public mostrarCursoDTO mostrarCurso(Long id) {
+    public MostrarCursoDTO mostrarCurso(Long id) {
         Curso curso = cursoRepository.findById(id)
                 .orElseThrow(() -> new ValidacionException("Curso no existe"));
-        return new mostrarCursoDTO(curso.getId(), curso.getNombre(), curso.getCategoria());
+        return new MostrarCursoDTO(curso.getId(), curso.getNombre(), curso.getCategoria());
     }
 
     @Transactional
-    public mostrarCursoDTO actualizarCurso(@Valid ActualizarCursoDTO actualizarCursoDTO) {
+    public MostrarCursoDTO actualizarCurso(@Valid ActualizarCursoDTO actualizarCursoDTO) {
         Curso curso = cursoRepository.findById(actualizarCursoDTO.id())
                 .orElseThrow(() -> new ValidacionException("Curso no existe"));
         curso.actualizar(actualizarCursoDTO);
-        return new mostrarCursoDTO(curso.getId(), curso.getNombre(), curso.getCategoria());
+        return new MostrarCursoDTO(curso.getId(), curso.getNombre(), curso.getCategoria());
     }
 
     @Transactional
