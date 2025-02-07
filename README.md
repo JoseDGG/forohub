@@ -55,11 +55,11 @@ This project is configured to use an in-memory H2 database by default. You can c
 Swagger is configured to generate API documentation automatically. You can access the Swagger interface at the following URL when the server is up and running:```
 http://localhost:8080/swagger-ui/index.html
 
-![swagger pt1](\assets\swaggerpt1.png)
+![swagger pt1](src/main/java/com/jdgg/forohub/assets/swaggerpt1.png)
 
 and
 
-![swagger pt2](\assets\swaggerpt2.png)
+![swagger pt2](src/main/java/com/jdgg/forohub/assets/swaggerpt2.png)
 ### Execution
 ```
 This project currently works on console
