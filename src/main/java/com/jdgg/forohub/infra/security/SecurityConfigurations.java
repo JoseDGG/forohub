@@ -31,7 +31,7 @@ public class SecurityConfigurations {
                 .sessionManagement(sm -> sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(req -> {
                     //Permite el acceso sin autenticacion al endpoint /login solo para solicitudes POST.
-                    req.requestMatchers(HttpMethod.POST, "/login").permitAll();
+                    req.requestMatchers(HttpMethod.POST, "/auth/login").permitAll();
                     req.requestMatchers(HttpMethod.DELETE, "/cursos").hasRole(Rol.ADMIN.name());
                     req.requestMatchers(HttpMethod.DELETE, "/topicos").hasAuthority(Rol.ADMIN.name());
                     //SpringDocs URL:
