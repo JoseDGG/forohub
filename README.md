@@ -1,6 +1,7 @@
 # Foro Hub 
 
-Foro Hub es una aplicación de foro diseñada para facilitar la comunicación y discusión entre usuarios. Esta aplicación permite a los usuarios crear tópicos, responder a los mismos y participar en discusiones.
+Forum Hub is a forum application designed to facilitate communication and discussion between users. 
+This application allows users to create topics, reply to them, and participate in discussions.
 
 ## Characteristics
 
